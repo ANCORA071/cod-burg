@@ -1,9 +1,72 @@
-version: "2.15.1"
+# version: '3'
 
-services: 
-  app:
+#   postgres-devburger:
+#     container_name: postgres-devburger
+#     image: postgres
+#     restart: always
+#     environment:
+#       POSTGRES_PASSWORD: postgres
+#     ports:
+#       - "5432:5432"
+#     networks:
+#       - devburger-newtwork
+
+#   mongo-devburger:
+#     container_name: mongo-devburger
+#     image: mongo
+#     restart: always
+#     ports:
+#       - "27017:27017"
+#     networks:
+#       - devburger-newtwork
+
+# networks:
+#   devburger-newtwork:
+#     driver: bridge
+ 
+
+
+    #  POSTGRES_USER: ${POSTGRES_USER:-postgres}
+    #   POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+
+    
+
+
+version: '3'
+
+services:
+  backend-devburger:
+    container_name: backend-devburger
+    restart: always
     build: .
     ports:
       - "3000:3000"
-    command: yarn dev
-   
+    networks:
+      - devburger-newtwork
+    
+  postgres-devburger:
+    container_name: postgres-devburger
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "myscretpassword"
+    ports:
+      - "5432:5432"
+    networks:
+      - devburger-newtwork
+    
+  mongo-devburger:
+    container_name: mongo-devburger
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    networks:
+      - devburger-newtwork
+      
+  
+
+
+networks:
+  devburger-newtwork:
+    driver: bridge
