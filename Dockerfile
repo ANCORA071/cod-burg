@@ -32,8 +32,10 @@ WORKDIR "/devburger"
 
 COPY ["./package.json", "nodemon.json", "/devburger/"]
 COPY ["./.sequelizerc", "yarn.lock", "/devburger/"]
+COPY ["./src", "/devburger/src"]
+
 RUN ["yarn"]
 
-COPY ["./src", "/devburger/src"]
+
 
 CMD ["yarn", "dev"]

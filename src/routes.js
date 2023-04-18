@@ -27,7 +27,7 @@ routes.delete('/products/:id', ProductController.delete);
 
 routes.post('/categories', upload.single('file'), CategoryController.store);
 routes.get('/categories',  CategoryController.index);
-routes.put('/categories/:id', upload.single('file'), CategoryController.update);
+routes.delete('/categories/:id', CategoryController.delete);
 
 routes.post('/orders',  OrderController.store);
 routes.get('/orders',  OrderController.index);

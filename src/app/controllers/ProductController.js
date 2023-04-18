@@ -4,11 +4,13 @@ import Category from '../models/Category';
 import User from '../models/User';
 
 class ProductController {
+
   async store(req, res) {
+
     try {
       const schema = Yup.object().shape({
         name: Yup.string().required(),
-        price: Yup.number().required(),
+        price: Yup.string().required(),
         category_id: Yup.number().required(),
         offer: Yup.boolean(),
       });
@@ -28,6 +30,7 @@ class ProductController {
       const { filename: path } = req.file;
       const { name, price, category_id, offer } = req.body;
 
+
       const product = await Product.create({
         name,
         price,
@@ -35,7 +38,7 @@ class ProductController {
         path,
         offer,
       });
-
+   
       return res.status(201).json(product);
     } catch (err) {
       console.log(err);
@@ -60,7 +63,7 @@ class ProductController {
     try {
       const schema = Yup.object().shape({
         name: Yup.string(),
-        price: Yup.number(),
+        price: Yup.string(),
         category_id: Yup.number(),
         offer: Yup.boolean(),
       });
@@ -114,22 +117,24 @@ class ProductController {
   }
 
   async delete(req, res) {
-    const { admin: isAdmin } = await User.findByPk(req.userId);
-  
-    if (!isAdmin) {
-      return res.status(401).json();
-    }
-  
-    const { id } = req.params;
-  
- 
     try {
-      await Product.destroy({ where: { id } });
-    } catch (err) {
-      return res.status(400).json({ error: err.message });
-    }
+      const user = await User.findByPk(req.userId);
+      if (!user || !user.admin) {
+        return res.status(401).json({ error: "Unauthorized" });
+      }
   
-    return res.status(204).json();
+      const { id } = req.params;
+  
+      const deletedProduct = await Product.destroy({ where: { id } });
+      if (deletedProduct === 0) {
+        return res.status(404).json({ error: "Product not found" });
+      }
+  
+      return res.status(204).json();
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
   }
 }
 

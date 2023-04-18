@@ -64,9 +64,6 @@ services:
     networks:
       - devburger-newtwork
       
-  
-
-
 networks:
   devburger-newtwork:
     driver: bridge
