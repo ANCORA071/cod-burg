@@ -32,7 +32,7 @@ adicionar novos produtos, criar categorias e realizar outras tarefas de gerencia
 <h2>Tecnologias utilizadas</h2>
 
 <h3>Back-end:</h3>
-<p>Node.js com Express e TypeScript.</p>
+<p>Node.js com Express e JavaScript.</p>
 
 <p>PostgreSQL e MongoDB como bancos de dados.</p>
 
