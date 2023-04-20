@@ -24,7 +24,7 @@
 <img width="450" height="300" src="https://user-images.githubusercontent.com/118227265/233434472-1007b977-c083-495d-a39e-4900d6ece138.JPG"/>
 </p>
 
-https://user-images.githubusercontent.com/118227265/233434475-febe139d-7baf-4866-92c7-4c06fcd461d6.JPG
+
 <p>Este é um projeto Full Stack de uma plataforma de pedidos de comida, onde os usuários podem se cadastrar, 
 escolher os produtos desejados e realizar pedidos. O administrador da plataforma pode verificar e gerenciar esses pedidos, 
 adicionar novos produtos, criar categorias e realizar outras tarefas de gerenciamento.</p>
