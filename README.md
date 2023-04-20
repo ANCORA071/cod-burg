@@ -15,10 +15,16 @@
 
    <img alt="Github stars" src="https://img.shields.io/github/stars/TexLuciano/api-devburger?color=DC143C" /> 
 </p>
+
 <p align="center">
-<img width="450" height="300" src="for-readme/1.JPG/>
+<img width="450" height="300" src="https://user-images.githubusercontent.com/118227265/233434475-febe139d-7baf-4866-92c7-4c06fcd461d6.JPG"/>
+<img width="450" height="300" src="https://user-images.githubusercontent.com/118227265/233434481-2301d375-b51b-441c-a2b4-9ff88a73e7ba.JPG"/>
+<img width="450" height="300" src="https://user-images.githubusercontent.com/118227265/233434478-306d6ede-0294-47c4-881a-89f4457be5bd.JPG"/>
+<img width="450" height="300" src="https://user-images.githubusercontent.com/118227265/233434475-febe139d-7baf-4866-92c7-4c06fcd461d6.JPG"/>
+<img width="450" height="300" src="https://user-images.githubusercontent.com/118227265/233434472-1007b977-c083-495d-a39e-4900d6ece138.JPG"/>
 </p>
 
+https://user-images.githubusercontent.com/118227265/233434475-febe139d-7baf-4866-92c7-4c06fcd461d6.JPG
 <p>Este é um projeto Full Stack de uma plataforma de pedidos de comida, onde os usuários podem se cadastrar, 
 escolher os produtos desejados e realizar pedidos. O administrador da plataforma pode verificar e gerenciar esses pedidos, 
 adicionar novos produtos, criar categorias e realizar outras tarefas de gerenciamento.</p>
